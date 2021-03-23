@@ -7,7 +7,7 @@ from microbit import *
 # Set up the servo pin. 
 # You can choose pinX (where X is the 
 # number next to the pin on your board)
-servo_pin = pin13 # change 13 to the pin you have the yellow/orange wire connected to
+servo_pin = pin0 # change 0 to the pin you have the yellow/orange wire connected to
 servo_pin.set_analog_period(20)
 
 def move_to_angle(angle, min_angle=0, max_angle=180):

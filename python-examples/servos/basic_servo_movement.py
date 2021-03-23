@@ -7,20 +7,20 @@ from microbit import *
 # Set up the servo pin. 
 # You can choose pinX (where X is the 
 # number next to the pin on your board)
-servo_pin = pin13 # change 13 to the pin you have the yellow/orange wire connected to
+servo_pin = pin0 
 servo_pin.set_analog_period(20)
+MIN_WIDTH = 0.5
+MAX_WIDTH = 2.7
 
-def move_to_angle(angle, min_angle=0, max_angle=180):
-    min_width, max_width = 0.5, 2.5
-    width = (angle / max_angle) * (max_width - min_width) + min_width
-    print(width)
+def move_to_angle(angle, min_angle=0, max_angle=250):
+    width = (angle / max_angle) * (MAX_WIDTH - MIN_WIDTH) + MIN_WIDTH
     set_pulse(width)
 
 def set_pulse(width):
     servo_pin.write_analog(1023 * width / 20)
 
 while True: 
-    print("Servo movement loop")
-    for i in range(0, 200, 20):
-        move_to_angle(i)
-        sleep(500)
+    move_to_angle(0)
+    sleep(2000)
+    move_to_angle(180)
+    sleep(2000)

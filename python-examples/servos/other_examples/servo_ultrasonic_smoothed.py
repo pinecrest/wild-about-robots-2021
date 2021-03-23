@@ -9,19 +9,29 @@ from machine import time_pulse_us
 # Set up the servo pin.
 # You can choose pinX (where X is the
 # number next to the pin on your board)
-servo_pin = pin13  # change 13 to the pin you have the yellow/orange wire connected to
+servo_pin = pin0  # change 0 to the pin you have the yellow/orange wire connected to
 servo_pin.set_analog_period(20)
-trig = pin0
-echo = pin1
+
+# Some constants to help with servo code
+# Pulse widths
 MIN_WIDTH = 0.5
 MAX_WIDTH = 2.7
+# range of positions in degrees
 MIN_ANGLE = 0
 MAX_ANGLE = 250
+
+# set up the ultrasonic sensor pins. The Ultrasonic sensor needs four wires to work.
+# in addition to power and ground, the sensor needs a trigger pin and echo pin.
+trig = pin1
+echo = pin2
+
 
 
 
 def setup_ultrasonic():
-
+    """This will initialize the two pins for the ultrasonic sensor 
+       and ensure they are ready to send and receive pulses
+    """
     trig.write_digital(0)
     echo.read_digital()
 
