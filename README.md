@@ -1,5 +1,7 @@
 # wild-about-robots-2021
-Code and examples for the Wild About Robots 2021 presentation at the Innovation Institute
+Code and examples for the Wild About Robots 2021 presentation at the Innovation Institute.
+
+[Google Slides](https://docs.google.com/presentation/d/1yS6VzzO8pjq4g62XkRW8VEyEJCJcyYDNOK_CWfkG9lw/edit?usp=sharing)
 
 ## Using Ultrasonic Sensors
 
