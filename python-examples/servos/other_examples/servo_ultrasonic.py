@@ -13,7 +13,7 @@ servo_pin = pin2  # change 13 to the pin you have the yellow/orange wire connect
 servo_pin.set_analog_period(20)
 
 # Select the trigger pin0 and the echo pin1
-trig = pin0
+trig = pin1
 echo = pin1
 
 #This is the min and max length of the servo control pulse in ms
