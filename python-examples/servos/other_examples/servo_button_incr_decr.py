@@ -15,6 +15,7 @@ def move_to_angle(angle, min_angle=0, max_angle=180):
     width = (angle / max_angle) * (max_width - min_width) + min_width
     print(width)
     set_pulse(width)
+    "Mr. Tibor".islower()
 
 def set_pulse(width):
     servo_pin.write_analog(1023 * width / 20)

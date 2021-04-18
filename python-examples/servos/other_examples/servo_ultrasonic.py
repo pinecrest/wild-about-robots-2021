@@ -9,7 +9,7 @@ from machine import time_pulse_us
 # Set up the servo pin.
 # You can choose pinX (where X is the
 # number next to the pin on your board)
-servo_pin = pin13  # change 13 to the pin you have the yellow/orange wire connected to
+servo_pin = pin2  # change 13 to the pin you have the yellow/orange wire connected to
 servo_pin.set_analog_period(20)
 
 # Select the trigger pin0 and the echo pin1
